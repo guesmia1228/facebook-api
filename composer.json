@@ -1,12 +1,22 @@
 {
     "name": "laravel/lumen",
     "description": "The Laravel Lumen Framework.",
-    "keywords": ["framework", "laravel", "lumen"],
+    "keywords": [
+        "framework",
+        "laravel",
+        "lumen"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
         "php": "^8.1",
-        "laravel/lumen-framework": "^10.0"
+        "darkaonline/swagger-lume": "*",
+        "zircote/swagger-php": "*",
+        "facebook/graph-sdk": "^5.1",
+        "facebook/php-ads-sdk": "*",
+        "laravel/lumen-framework": "^10.0",
+        "google/cloud": "*",
+	"ext-bcmath": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -18,7 +28,15 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Libraries/Helpers/extLogger.php",
+            "app/Libraries/Helpers/basics.php",
+            "app/Libraries/Helpers/persists.php",
+            "app/Libraries/Helpers/persistsStats.php",
+            "app/Libraries/Helpers/persitsWrites.php",
+            "app/Libraries/Helpers/metrics.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
